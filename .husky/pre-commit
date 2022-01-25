@@ -1,0 +1,14 @@
+###
+ # @Author: LiuZhichao
+ # @Date: 2022-01-25 10:14:54
+ # @LastEditors: LiuZhichao
+ # @LastEditTime: 2022-01-25 10:20:07
+ # @FilePath: /haricots/.husky/pre-commit
+ # @Description:
+ # Copyright (c) 2022 by LiuZhichao, All Rights Reserved.
+###
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+eslint --fix ./src --ext .vue,.js,.ts
+
+npx lint-staged

@@ -1,3 +1,12 @@
+<!--
+ * @Author: LiuZhichao
+ * @Date: 2022-01-25 09:55:49
+ * @LastEditors: LiuZhichao
+ * @LastEditTime: 2022-01-25 14:56:29
+ * @FilePath: /haricots/src/components/HelloWorld.vue
+ * @Description:
+ * Copyright (c) 2022 by LiuZhichao, All Rights Reserved.
+-->
 <script setup lang="ts">
 import { ref } from 'vue'
 import useHome from '@/composables/useHome'
@@ -25,7 +34,9 @@ const count = ref(0)
   </p>
 
   <p>
-    <a href="https://vitejs.dev/guide/features.html" target="_blank">Vite Docs</a>
+    <a href="https://vitejs.dev/guide/features.html" target="_blank"
+      >Vite Docs</a
+    >
     |
     <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Docs</a>
   </p>
