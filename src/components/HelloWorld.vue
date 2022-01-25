@@ -2,7 +2,7 @@
  * @Author: LiuZhichao
  * @Date: 2022-01-25 09:55:49
  * @LastEditors: LiuZhichao
- * @LastEditTime: 2022-01-25 14:56:29
+ * @LastEditTime: 2022-01-25 15:02:51
  * @FilePath: /haricots/src/components/HelloWorld.vue
  * @Description:
  * Copyright (c) 2022 by LiuZhichao, All Rights Reserved.
@@ -54,7 +54,7 @@ a {
 }
 
 label {
-  margin: 0 0.5em;
+  margin: 0;
   font-weight: bold;
 }
 

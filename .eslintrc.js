@@ -2,7 +2,7 @@
  * @Author: LiuZhichao
  * @Date: 2022-01-24 10:34:01
  * @LastEditors: LiuZhichao
- * @LastEditTime: 2022-01-25 15:01:40
+ * @LastEditTime: 2022-01-25 15:04:51
  * @FilePath: /haricots/.eslintrc.js
  * @Description:
  * Copyright (c) 2022 by LiuZhichao, All Rights Reserved.
@@ -24,7 +24,9 @@ module.exports = {
       node: {
         extensions: ['.js', '.jsx', '.ts', '.tsx', '.vue']
       },
-      typescript: { project: `${__dirname}/tsconfig.json` }
+      typescript: {
+        project: `${__dirname}/tsconfig.json`
+      }
     }
   },
   extends: [
@@ -74,7 +76,6 @@ module.exports = {
         jsx: 'never',
         ts: 'never',
         tsx: 'never'
-        // vue: 'never'
       }
     ],
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
@@ -91,4 +92,9 @@ module.exports = {
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-this-alias': ['off']
   }
+  /**  Unable to resolve path to module '@'
+        解决方法:   1.pnpm install eslint-import-resolver-typescript -D
+                  2.在tsconfig.json文件的compilerOptions处增加"baseUrl": "./" 和"paths": { "@/*": ["src/*"] }
+                  3.在.eslintrc.js中增加settings: { 'import/resolver': { typescript: { project: `${__dirname}/tsconfig.json` } } } 亲测可用
+  */
 }
