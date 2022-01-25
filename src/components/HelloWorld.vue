@@ -2,7 +2,7 @@
  * @Author: LiuZhichao
  * @Date: 2022-01-25 09:55:49
  * @LastEditors: LiuZhichao
- * @LastEditTime: 2022-01-25 15:02:51
+ * @LastEditTime: 2022-01-25
  * @FilePath: /haricots/src/components/HelloWorld.vue
  * @Description:
  * Copyright (c) 2022 by LiuZhichao, All Rights Reserved.
@@ -10,12 +10,19 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import useHome from '@/composables/useHome'
+import { storeToRefs } from 'pinia'
+import { useMainStore } from '@/store'
 
 defineProps<{ msg: string }>()
 
 const num = useHome()
 console.log(num.value)
 const count = ref(0)
+const store = useMainStore()
+console.log('store.name before', store.name)
+const { name } = storeToRefs(store)
+name.value = '你好'
+console.log('after name', name.value, store.name)
 </script>
 
 <template>

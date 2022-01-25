@@ -2,7 +2,7 @@
  * @Author: LiuZhichao
  * @Date: 2022-01-24 10:34:01
  * @LastEditors: LiuZhichao
- * @LastEditTime: 2022-01-25 15:04:51
+ * @LastEditTime: 2022-01-25
  * @FilePath: /haricots/.eslintrc.js
  * @Description:
  * Copyright (c) 2022 by LiuZhichao, All Rights Reserved.
@@ -78,6 +78,7 @@ module.exports = {
         tsx: 'never'
       }
     ],
+    'import/prefer-default-export': 'off',
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-dupe-keys': 'error',
