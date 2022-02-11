@@ -2,7 +2,7 @@
  * @Author: LiuZhichao
  * @Date: 2022-01-25 09:55:49
  * @LastEditors: LiuZhichao
- * @LastEditTime: 2022-01-25
+ * @LastEditTime: 2022-01-26
  * @FilePath: /haricots/src/components/HelloWorld.vue
  * @Description:
  * Copyright (c) 2022 by LiuZhichao, All Rights Reserved.
@@ -23,6 +23,9 @@ console.log('store.name before', store.name)
 const { name } = storeToRefs(store)
 name.value = '你好'
 console.log('after name', name.value, store.name)
+store.changeName('呵呵')
+console.log()
+store.$reset()
 </script>
 
 <template>

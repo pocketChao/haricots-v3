@@ -2,7 +2,7 @@
  * @Author: LiuZhichao
  * @Date: 2022-01-24 10:34:01
  * @LastEditors: LiuZhichao
- * @LastEditTime: 2022-01-25
+ * @LastEditTime: 2022-01-27
  * @FilePath: /haricots/.eslintrc.js
  * @Description:
  * Copyright (c) 2022 by LiuZhichao, All Rights Reserved.
@@ -79,13 +79,26 @@ module.exports = {
       }
     ],
     'import/prefer-default-export': 'off',
+    // 解决 https://stackoverflow.com/questions/44939304/eslint-should-be-listed-in-the-projects-dependencies-not-devdependencies
+    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-dupe-keys': 'error',
     'no-duplicate-case': 'error',
     'no-redeclare': 'error',
     'no-empty-function': 'error',
+    'no-label-var': 'off',
     'vue/name-property-casing': ['error', 'PascalCase'],
+    // 解决 defineEmits 报错:'param' is defined but never used https://segmentfault.com/q/1010000040813116
+    'no-unused-vars': [
+      'error',
+      {
+        vars: 'all',
+        args: 'after-used',
+        ignoreRestSiblings: true,
+        argsIgnorePattern: '^e_'
+      }
+    ],
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/no-empty-function': 'error',

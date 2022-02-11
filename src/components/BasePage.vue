@@ -1,3 +1,12 @@
+<!--
+ * @Author: LiuZhichao
+ * @Date: 2022-01-25
+ * @LastEditors: LiuZhichao
+ * @LastEditTime: 2022-01-26
+ * @FilePath: /haricots/src/components/BasePage.vue
+ * @Description:
+ * Copyright (c) 2022 by LiuZhichao, All Rights Reserved.
+-->
 <script setup lang="ts"></script>
 
 <template>
@@ -21,7 +30,8 @@
     border-radius: 19px 0 0 19px;
     font-size: 12px;
     font-weight: 500;
-    color: #ffffff;
+    color: #fff;
+
     .arrow {
       margin-right: 6px;
       width: 8px;

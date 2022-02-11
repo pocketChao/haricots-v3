@@ -1,7 +1,7 @@
 {
-    // Place your snippets for vue here. Each snippet is defined under a snippet name and has a prefix, body and 
+    // Place your snippets for vue here. Each snippet is defined under a snippet name and has a prefix, body and
     // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
-    // $1, $2 for tab stops, $0 for the final cursor position, and \${1:label}, \${2:another} for placeholders. Placeholders with the 
+    // $1, $2 for tab stops, $0 for the final cursor position, and \${1:label}, \${2:another} for placeholders. Placeholders with the
     // same ids are connected.
     // Example:
     // "template": {
@@ -99,8 +99,9 @@
 			"<script setup lang=\"ts\">",
 			"import { ref } from 'vue'",
 			"name: '$TM_FILENAME_BASE'",
+      "const a = ref(1)",
             "interface Props {",
-            "\tfoo?: string",    
+            "\tfoo?: string",
             "\tbar?: string[]",
             "}",
             "const props = withDefaults(defineProps<Props>(), {",
@@ -108,7 +109,7 @@
             "\tbar: () => ['one', 'two']",
             "})",
 			"const emit = defineEmits<{",
-			"\t(e: 'emitName', id: number): void",
+			"\t(e_name: 'emitName', e_parameter: number): void",
 			"}>()",
 			"\t$2",
 			"</script>\n",
